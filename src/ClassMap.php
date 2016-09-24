@@ -1,0 +1,105 @@
+<?php
+
+/**
+ * This file contain Seeren\Loader\ClassMap class
+ *     __
+ *    / /__ __ __ __ __ __
+ *   / // // // // // // /
+ *  /_// // // // // // /
+ *    /_//_//_//_//_//_/
+ *
+ * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @link http://www.seeren.fr/ Seeren
+ * @version 1.0.1
+ */
+
+namespace Seeren\Loader;
+
+/**
+ * Class for class map oading
+ * 
+ * @category Seeren
+ * @package Loader
+ */
+class ClassMap extends Loader implements ClassMapInterface
+{
+
+    private
+        /**
+         * @var array class name collection
+         */
+        $className;
+
+    /**
+     * Construct ClassMap
+     * 
+     * @param string $includePath include path
+     * @return null
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->className = [];
+    }
+
+    /**
+     * Parse base path
+     *
+     * @param string $classPath class path
+     * @return string parsed class path
+     */
+    private final function parseClassPath(string $classPath): string
+    {
+        return ltrim($classPath, "/");
+    }
+
+    /**
+     * Template method Get file name
+     *
+     * @param string $className class name
+     * @return string file name
+     */
+    public final function fileName(string $className): string
+    {
+        $fileName = "";
+        if (array_key_exists($className, $this->className)) {
+            $fileName = $this->className[$className];
+            $this->removeClass($className);
+        }
+        return $fileName;
+    }
+
+
+    /**
+     * Add class
+     *
+     * @param string $className class name
+     * @param string $classPath class path
+     * @return LoaderInterface self
+     */
+    public function addClass(
+        string $className,
+        string $classPath): LoaderInterface
+    {
+        if (!array_key_exists($className, $this->className)) {
+            $this->className[$className] = $this->parseClassPath($classPath);
+        }
+        return $this;
+    }
+
+    /**
+     * Remove class
+     * 
+     * @param string $className class name
+     * @return LoaderInterface self
+     */
+    public function removeClass(string $className): LoaderInterface
+    {
+        if (array_key_exists($className, $this->className)) {
+            unset($this->className[$className]);
+        }
+        unset($this->className[$className]);
+        return $this;
+    }
+
+}
