@@ -21,8 +21,9 @@ namespace Seeren\Loader;
  * @category Seeren
  * @package Loader
  * @see http://www.php-fig.org/psr/psr-4/
+ * @final
  */
-class Psr4 extends Loader implements Psr4Interface
+final class Psr4 extends Loader implements Psr4Interface
 {
 
     private
@@ -37,7 +38,7 @@ class Psr4 extends Loader implements Psr4Interface
      * @param string $includePath include path
      * @return null
      */
-    public function __construct(string $includePath = null)
+    public final function __construct(string $includePath = null)
     {
         parent::__construct();
         $this->prefix = [];
@@ -62,7 +63,7 @@ class Psr4 extends Loader implements Psr4Interface
      */
     private final function parseBaseDirectory(string $baseDirectory): string
     {
-        return trim($baseDirectory, "/") . "/";
+        return trim($baseDirectory, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR;
     }
 
     /**
@@ -79,7 +80,9 @@ class Psr4 extends Loader implements Psr4Interface
         return str_replace(
                 "\\",
                 DIRECTORY_SEPARATOR,
-                $baseDirectory . $relativeClass . ".php");
+                $baseDirectory
+              . $relativeClass
+              . ".php");
     }
 
     /**
@@ -91,20 +94,14 @@ class Psr4 extends Loader implements Psr4Interface
      */
     private final function find(string $prefix, string $relativeClass): string
     {
-       if (is_string($this->prefix[$prefix])) {
-           $fileName = $this->parseFileName(
-               $this->prefix[$prefix],
-               $relativeClass);
-       } else if (is_array($this->prefix[$prefix])) {
-           foreach ($this->prefix[$prefix] as &$value) {
-               if (($fileName = $this->parseFileName($value, $relativeClass))
-                && is_file($fileName)) {
-                   break;
-               }
-               $fileName = "";
+       foreach ($this->prefix[$prefix] as &$value) {
+           $fileName = $this->parseFileName($value, $relativeClass);
+           if (is_file($fileName)) {
+               break;
            }
-        }
-        return $fileName;
+           $fileName = "";
+       }
+       return $fileName;
     }
 
     /**
@@ -113,7 +110,7 @@ class Psr4 extends Loader implements Psr4Interface
      * @param string $className class name
      * @return string file name
      */
-    public final function fileName(string $className): string
+    protected final function fileName(string $className): string
     {
         $fileName = "";
         $prefix = $className;
@@ -136,7 +133,9 @@ class Psr4 extends Loader implements Psr4Interface
      * @param string|array $baseDirectory base directory
      * @return LoaderInterface self
      */
-    public function addPrefix(string $prefix, $baseDirectory): LoaderInterface
+    public final function addPrefix(
+        string $prefix,
+        $baseDirectory): LoaderInterface
     {
         $parsedPrefix = $this->parsePrefix($prefix);
         if (!array_key_exists($parsedPrefix, $this->prefix)) {
@@ -145,8 +144,9 @@ class Psr4 extends Loader implements Psr4Interface
                     $value = $this->parseBaseDirectory((string) $value);
                 }
             } else {
-                $baseDirectory = $this->parseBaseDirectory(
-                    (string) $baseDirectory);
+                $baseDirectory = [
+                    $this->parseBaseDirectory((string) $baseDirectory)
+                ];
             }
             $this->prefix[$parsedPrefix] = $baseDirectory;
         }
@@ -159,7 +159,7 @@ class Psr4 extends Loader implements Psr4Interface
      * @param string $prefixe namespace prefix
      * @return LoaderInterface self
      */
-    public function removePrefix(string $prefix): LoaderInterface
+    public final function removePrefix(string $prefix): LoaderInterface
     {
         $parsedPrefix = $this->parsePrefix($prefix);
         if (array_key_exists($parsedPrefix, $this->prefix)) {

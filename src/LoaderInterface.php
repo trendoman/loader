@@ -37,13 +37,13 @@ interface LoaderInterface
     *
     * @return LoaderInterface self
     */
-   public function register(): LoaderInterface;
+   public function register(): self;
 
    /**
     * Unregister
     *
     * @return LoaderInterface self
     */
-   public function unregister(): LoaderInterface;
+   public function unregister(): self;
 
 }

@@ -20,8 +20,9 @@ namespace Seeren\Loader;
  * 
  * @category Seeren
  * @package Loader
+ * @final
  */
-class ClassMap extends Loader implements ClassMapInterface
+final class ClassMap extends Loader implements ClassMapInterface
 {
 
     private
@@ -36,21 +37,10 @@ class ClassMap extends Loader implements ClassMapInterface
      * @param string $includePath include path
      * @return null
      */
-    public function __construct()
+    public final function __construct()
     {
         parent::__construct();
         $this->className = [];
-    }
-
-    /**
-     * Parse base path
-     *
-     * @param string $classPath class path
-     * @return string parsed class path
-     */
-    private final function parseClassPath(string $classPath): string
-    {
-        return ltrim($classPath, "/");
     }
 
     /**
@@ -59,7 +49,7 @@ class ClassMap extends Loader implements ClassMapInterface
      * @param string $className class name
      * @return string file name
      */
-    public final function fileName(string $className): string
+    protected final function fileName(string $className): string
     {
         $fileName = "";
         if (array_key_exists($className, $this->className)) {
@@ -69,7 +59,6 @@ class ClassMap extends Loader implements ClassMapInterface
         return $fileName;
     }
 
-
     /**
      * Add class
      *
@@ -77,12 +66,14 @@ class ClassMap extends Loader implements ClassMapInterface
      * @param string $classPath class path
      * @return LoaderInterface self
      */
-    public function addClass(
+    public final function addClass(
         string $className,
         string $classPath): LoaderInterface
     {
         if (!array_key_exists($className, $this->className)) {
-            $this->className[$className] = $this->parseClassPath($classPath);
+            $this->className[$className] = ltrim(
+                $classPath,
+                DIRECTORY_SEPARATOR);
         }
         return $this;
     }
@@ -93,12 +84,11 @@ class ClassMap extends Loader implements ClassMapInterface
      * @param string $className class name
      * @return LoaderInterface self
      */
-    public function removeClass(string $className): LoaderInterface
+    public final function removeClass(string $className): LoaderInterface
     {
         if (array_key_exists($className, $this->className)) {
             unset($this->className[$className]);
         }
-        unset($this->className[$className]);
         return $this;
     }
 
