@@ -21,7 +21,7 @@ namespace Seeren\Loader;
  * @category Seeren
  * @package Loader
  */
-interface ClassMapInterface extends LoaderInterface
+interface ClassMapInterface
 {
 
     /**
@@ -29,7 +29,7 @@ interface ClassMapInterface extends LoaderInterface
      *
      * @param string $className class name
      * @param string $classPath class path
-     * @return LoaderInterface self
+     * @return LoaderInterface static
      */
     public function addClass(
         string $className,
@@ -39,7 +39,7 @@ interface ClassMapInterface extends LoaderInterface
      * Remove class
      * 
      * @param string $className class name
-     * @return LoaderInterface self
+     * @return LoaderInterface static
      */
     public function removeClass(string $className): LoaderInterface;
 

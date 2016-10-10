@@ -35,14 +35,14 @@ interface LoaderInterface
    /**
     * Register
     *
-    * @return LoaderInterface self
+    * @return LoaderInterface static
     */
    public function register(): self;
 
    /**
     * Unregister
     *
-    * @return LoaderInterface self
+    * @return LoaderInterface static
     */
    public function unregister(): self;
 

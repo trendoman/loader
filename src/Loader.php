@@ -48,7 +48,7 @@ abstract class Loader
     * @param string $className class name
     * @return bool loaded or not
     */
-   public final function load(string $className): bool
+   public function load(string $className): bool
    {
        if (($fileName = $this->fileName($className))) {
            require $fileName;
@@ -60,7 +60,7 @@ abstract class Loader
    /**
     * Register
     *
-    * @return LoaderInterface loader
+    * @return LoaderInterface static
     */
    public final function register(): LoaderInterface
    {
@@ -71,7 +71,7 @@ abstract class Loader
    /**
     * Unregister
     *
-    * @return LoaderInterface loader
+    * @return LoaderInterface static
     */
    public final function unregister(): LoaderInterface
    {

@@ -22,7 +22,9 @@ namespace Seeren\Loader;
  * @package Loader
  * @final
  */
-final class ClassMap extends Loader implements ClassMapInterface
+final class ClassMap extends Loader implements
+    ClassMapInterface,
+    LoaderInterface
 {
 
     private
@@ -64,7 +66,7 @@ final class ClassMap extends Loader implements ClassMapInterface
      *
      * @param string $className class name
      * @param string $classPath class path
-     * @return LoaderInterface self
+     * @return LoaderInterface static
      */
     public final function addClass(
         string $className,
@@ -82,7 +84,7 @@ final class ClassMap extends Loader implements ClassMapInterface
      * Remove class
      * 
      * @param string $className class name
-     * @return LoaderInterface self
+     * @return LoaderInterface static
      */
     public final function removeClass(string $className): LoaderInterface
     {

@@ -23,7 +23,9 @@ namespace Seeren\Loader;
  * @see http://www.php-fig.org/psr/psr-4/
  * @final
  */
-final class Psr4 extends Loader implements Psr4Interface
+final class Psr4 extends Loader implements
+    Psr4Interface,
+    LoaderInterface
 {
 
     private
@@ -131,7 +133,7 @@ final class Psr4 extends Loader implements Psr4Interface
      *
      * @param string $prefix namespace prefix
      * @param string|array $baseDirectory base directory
-     * @return LoaderInterface self
+     * @return LoaderInterface static
      */
     public final function addPrefix(
         string $prefix,
@@ -157,7 +159,7 @@ final class Psr4 extends Loader implements Psr4Interface
      * Remove prefix
      *
      * @param string $prefixe namespace prefix
-     * @return LoaderInterface self
+     * @return LoaderInterface static
      */
     public final function removePrefix(string $prefix): LoaderInterface
     {

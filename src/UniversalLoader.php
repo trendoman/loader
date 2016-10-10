@@ -20,11 +20,13 @@ namespace Seeren\Loader;
  * 
  * @category Seeren
  * @package Loader
+ * @final
  */
-class UniversalLoader extends Loader implements
+final class UniversalLoader extends Loader implements
     UniversalLoaderInterface,
     Psr4Interface,
-    ClassMapInterface
+    ClassMapInterface,
+    LoaderInterface
 {
 
    private
@@ -44,7 +46,7 @@ class UniversalLoader extends Loader implements
      * @param ClassMapInterface $classMap class map loader
      * @return null
      */
-    public function __construct(
+    public final function __construct(
         Psr4Interface $psr4,
         ClassMapInterface $classMap)
     {
@@ -54,18 +56,45 @@ class UniversalLoader extends Loader implements
     }
 
     /**
+     * Template method Get file name
      *
-     * @param string $fileName
-     * @return UniversalLoaderInterface
+     * @param string $className class name
+     * @return string file name
      */
-    public final function compose(string $fileName): UniversalLoaderInterface
+    protected final function fileName(string $className): string
+    {
+        return "";
+    }
+
+    /**
+     * Load file for className
+     *
+     * @param string $className class name
+     * @return bool loaded or not
+     */
+    public final function load(string $className): bool
+    {
+        if ($this->psr4->load($className)
+         || $this->classMap->load($className)) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Compose loader
+     * 
+     * @param string $fileName
+     * @return LoaderInterface static
+     */
+    public final function compose(string $fileName): LoaderInterface
     {
        if (is_file($fileName)
         && ($config = json_decode(file_get_contents($fileName)))
         && isset($config->{"autoload"})
         && isset($config->{"autoload"}->{"psr-4"})) {
            $includePath = dirname($fileName) . DIRECTORY_SEPARATOR;
-           foreach ($config->{"autoload"}->{"psr-4"} as $key => &$value) {
+           foreach ($config->{"autoload"}->{"psr-4"} as $key => $value) {
                $this->psr4->addPrefix($key, $includePath . $value);
            }
        }
@@ -73,26 +102,11 @@ class UniversalLoader extends Loader implements
     }
 
     /**
-     * Template method Get file name
-     *
-     * @param string $className class name
-     * @return string file name
-     */
-    public final function fileName(string $className): string
-    {
-        if (($fileName = $this->psr4->fileName($className))
-         || ($fileName = $this->classMap->fileName($className))) {
-            return $fileName;
-        }
-        return "";
-    }
-
-    /**
      * Add prefix
      *
      * @param string $prefix namespace prefix
      * @param string|array $baseDirectory base directory
-     * @return LoaderInterface self
+     * @return LoaderInterface static
      */
     public final function addPrefix(
         string $prefix,
@@ -106,7 +120,7 @@ class UniversalLoader extends Loader implements
      * Remove prefix
      *
      * @param string $prefixe namespace prefix
-     * @return LoaderInterface self
+     * @return LoaderInterface static
      */
     public final function removePrefix(string $prefix): LoaderInterface
     {
@@ -119,7 +133,7 @@ class UniversalLoader extends Loader implements
      *
      * @param string $className class name
      * @param string $classPath class path
-     * @return LoaderInterface self
+     * @return LoaderInterface static
      */
     public final function addClass(
         string $className,
@@ -133,7 +147,7 @@ class UniversalLoader extends Loader implements
      * Remove class
      *
      * @param string $className class name
-     * @return LoaderInterface self
+     * @return LoaderInterface static
      */
     public final function removeClass(string $className): LoaderInterface
     {

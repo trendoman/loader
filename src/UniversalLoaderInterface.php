@@ -27,8 +27,8 @@ interface UniversalLoaderInterface
    /**
     * 
     * @param string $fileName
-    * @return UniversalLoaderInterface
+    * @return LoaderInterface static
     */
-   public function compose(string $fileName): UniversalLoaderInterface;
+   public function compose(string $fileName): LoaderInterface;
 
 }

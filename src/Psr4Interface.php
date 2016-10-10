@@ -22,7 +22,7 @@ namespace Seeren\Loader;
  * @package Loader
  * @see http://www.php-fig.org/psr/psr-4/
  */
-interface Psr4Interface extends LoaderInterface
+interface Psr4Interface
 {
 
     /**
@@ -30,7 +30,7 @@ interface Psr4Interface extends LoaderInterface
      *
      * @param string $prefix namespace prefix
      * @param string|array $baseDirectory base directory
-     * @return LoaderInterface self
+     * @return LoaderInterface static
      */
     public function addPrefix(string $prefix, $baseDirectory): LoaderInterface;
 
@@ -38,7 +38,7 @@ interface Psr4Interface extends LoaderInterface
      * Remove prefix
      * 
      * @param string $prefix namespace prefix
-     * @return LoaderInterface self
+     * @return LoaderInterface static
      */
     public function removePrefix(string $prefix): LoaderInterface;
 
