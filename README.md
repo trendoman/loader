@@ -52,7 +52,7 @@ $loader = new ClassMap;
 $loader->addClass("MyClass", "app/acme/foo/my_class.php");
 ```
 
-### Running the tests
+#### Running the tests
 
 Running tests with phpunit in the test folder.
 
