@@ -37,10 +37,9 @@ final class Psr4 extends Loader implements
     /**
      * Construct Psr4
      * 
-     * @param string $includePath include path
      * @return null
      */
-    public final function __construct(string $includePath = null)
+    public final function __construct()
     {
         parent::__construct();
         $this->prefix = [];
