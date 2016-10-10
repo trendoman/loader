@@ -40,9 +40,7 @@ abstract class LoaderInterfaceTest extends \PHPUnit_Framework_TestCase
     */
    public final function testLoad()
    {
-       $this->assertFalse(
-           $stub = $this->getLoader()->load("")
-       );
+       $this->assertFalse($this->getLoader()->load(""));
    }
 
    /**
