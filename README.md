@@ -1,41 +1,55 @@
 ## Seeren\Loader\
 
-Load standard prefixed class.
-This package allows you to load classes for registred prefix and base directory. Interfaces and classes provid psr-4 implementation and require an optional include path.
+Load standard prefixed class or class map in a chain of responsability.
+This package provid psr-4 implementation and do not require an include path.
 
-### Code Example
+#### Code Example
 
-Create loader, register prefix for base directory then register the loader.
+Create loader, register prefix or class then register the loader.
 
-#### Seeren\Loader\Psr4
+### Seeren\Loader\UniversalLoader
+
+Use a chain of responsability for psr and class map loaders
+
+```php
+(new UniversalLoader(new Psr4, new ClassMap))
+->addPrefix("Acme\\Foo\\", "app/acme/foo/src/")
+->addClass("MyClass", "app/acme/foo/my_class.php")
+->register();
+```
+
+### Seeren\Loader\Psr4
 
 ```php
 /**
  * @see http://www.php-fig.org/psr/psr-4/
  */
- 
-use Seeren\Loader\Psr4;
 
-$loader = new Psr4();
+$loader = new Psr4;
 $loader->addPrefix("Acme\\Foo\\", "app/acme/foo/src/");
 $loader->register();
 ```
-
-Include path corresponding to a root project but he can be specified in constructor.
-If a composer.json exists at the root project directory, prefix will be automatically added.
-
 ```php
-$loader = new Psr4("includePath");
 $loader->removePrefix("Acme\\Foo\\");
 ```
-Prefix allow string|array and can have multiple base directory.
+
+Prefix allow string|string[] for have multiple base directory.
 
 ```php
-
-$loader->addPrefix("Acme\\Foo\\", ["app/acme/foo/src/", "app/acme/foo/test/"]);
-
+$loader->addPrefix("Acme\\Foo\\", [
+    "app/acme/foo/src/",
+    "app/acme/foo/test/"]);
 new \Acme\Foo\Bar;
 new \Acme\Foo\BarTest;
+```
+
+### Seeren\Loader\ClassMap
+
+Use class map loader for unnamspaced class.
+
+```php
+$loader = new ClassMap;
+$loader->addClass("MyClass", "app/acme/foo/my_class.php");
 ```
 
 ### Running the tests
@@ -46,6 +60,6 @@ Running tests with phpunit in the test folder.
 $ phpunit seeren/src/loader/test/Psr4Test.php
 ```
 
-### License
+#### License
 
-* [MIT](https://github.com/Seeren/Seeren/blob/master/LICENSE)
+[MIT](https://github.com/Seeren/Seeren/blob/master/LICENSE)
