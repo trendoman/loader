@@ -15,7 +15,7 @@
 
 namespace Seeren\Loader\Test;
 
-use Seeren\Loader\{LoaderInterface, Psr4};
+use Seeren\Loader\{LoaderInterface, Psr4, ClassMap};
 use ReflectionClass;
 
 /**
@@ -46,12 +46,8 @@ final class Psr4Test extends LoaderInterfaceTest
    {
       $stub = (new ReflectionClass(Psr4::class))
               ->newInstanceArgs([__DIR__ . "/../"]);
-       $stub->addPrefix("Seeren\\Loader\\", "src");
-       $stub->addPrefix("Seeren\\Loader\\Test\\", "test");
-       $this->assertTrue(
-           "" !== $stub->fileName(Psr4::class)
-        && "" !== $stub->fileName(self::class)
-       );
+      $stub->addPrefix("Seeren\\Loader\\", __DIR__ . "/../src");
+      $this->assertTrue($stub->load(ClassMap::class));
    }
 
 }
