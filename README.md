@@ -57,7 +57,7 @@ $loader->addClass("MyClass", "app/acme/foo/my_class.php");
 Running tests with phpunit in the test folder.
 
 ```
-$ phpunit seeren/src/loader/test/Psr4Test.php
+$ phpunit test/Psr4Test.php
 ```
 
 #### License
