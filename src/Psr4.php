@@ -21,11 +21,8 @@ namespace Seeren\Loader;
  * @category Seeren
  * @package Loader
  * @see http://www.php-fig.org/psr/psr-4/
- * @final
  */
-final class Psr4 extends Loader implements
-    Psr4Interface,
-    LoaderInterface
+class Psr4 extends Loader implements Psr4Interface, LoaderInterface
 {
 
     private

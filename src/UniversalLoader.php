@@ -20,9 +20,8 @@ namespace Seeren\Loader;
  * 
  * @category Seeren
  * @package Loader
- * @final
  */
-final class UniversalLoader extends Loader implements
+class UniversalLoader extends Loader implements
     UniversalLoaderInterface,
     Psr4Interface,
     ClassMapInterface,

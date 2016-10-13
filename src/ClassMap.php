@@ -20,11 +20,8 @@ namespace Seeren\Loader;
  * 
  * @category Seeren
  * @package Loader
- * @final
  */
-final class ClassMap extends Loader implements
-    ClassMapInterface,
-    LoaderInterface
+class ClassMap extends Loader implements ClassMapInterface, LoaderInterface
 {
 
     private
