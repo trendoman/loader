@@ -1,7 +1,6 @@
 ## Seeren\Loader\
 
 Load standard prefixed class or class map in a chain of responsability.
-This package provid psr-4 implementation and do not require an include path.
 
 #### Code Example
 
@@ -59,7 +58,3 @@ Running tests with phpunit in the test folder.
 ```
 $ phpunit test/Psr4Test.php
 ```
-
-#### License
-
-[MIT](https://github.com/Seeren/Seeren/blob/master/LICENSE)
