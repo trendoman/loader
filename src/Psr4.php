@@ -92,7 +92,7 @@ class Psr4 extends Loader implements Psr4Interface, LoaderInterface
      */
     private final function find(string $prefix, string $relativeClass): string
     {
-       foreach ($this->prefix[$prefix] as &$value) {
+       foreach ($this->prefix[$prefix] as $value) {
            $fileName = $this->parseFileName($value, $relativeClass);
            if (is_file($fileName)) {
                break;
