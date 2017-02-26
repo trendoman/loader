@@ -1,29 +1,19 @@
-## Seeren\Loader\
+[![Build Status](https://travis-ci.org/seeren/loader.svg?branch=master)](https://travis-ci.org/seeren/loader) [![GitHub license](https://img.shields.io/badge/license-MIT-orange.svg)](https://raw.githubusercontent.com/seeren/loader/master/LICENSE) [![Packagist](https://img.shields.io/packagist/v/seeren/loader.svg)](https://packagist.org/packages/seeren/loader) [![Packagist](https://img.shields.io/packagist/dt/seeren/loader.svg)](https://packagist.org/packages/seeren/loader/stats)
 
+# Seeren\Loader\
 Load standard prefixed class or class map in a chain of responsability.
-
-#### Code Example
-
 Create loader, register prefix or class then register the loader.
 
-### Seeren\Loader\UniversalLoader
-
+## Seeren\Loader\UniversalLoader
 Use a chain of responsability for psr and class map loaders
-
 ```php
 (new UniversalLoader(new Psr4, new ClassMap))
 ->addPrefix("Acme\\Foo\\", "app/acme/foo/src/")
-->addClass("MyClass", "app/acme/foo/my_class.php")
+->addClass("MyClass", "app/acme/foo/foo.php")
 ->register();
 ```
-
-### Seeren\Loader\Psr4
-
+## Seeren\Loader\Psr4
 ```php
-/**
- * @see http://www.php-fig.org/psr/psr-4/
- */
-
 $loader = new Psr4;
 $loader->addPrefix("Acme\\Foo\\", "app/acme/foo/src/");
 $loader->register();
@@ -31,9 +21,7 @@ $loader->register();
 ```php
 $loader->removePrefix("Acme\\Foo\\");
 ```
-
 Prefix allow string|string[] for have multiple base directory.
-
 ```php
 $loader->addPrefix("Acme\\Foo\\", [
     "app/acme/foo/src/",
@@ -42,19 +30,25 @@ new \Acme\Foo\Bar;
 new \Acme\Foo\BarTest;
 ```
 
-### Seeren\Loader\ClassMap
-
+## Seeren\Loader\ClassMap
 Use class map loader for unnamspaced class.
-
 ```php
 $loader = new ClassMap;
-$loader->addClass("MyClass", "app/acme/foo/my_class.php");
+$loader->addClass("MyClass", "app/acme/foo/foo.php");
 ```
 
-#### Running the tests
-
-Running tests with phpunit in the test folder.
-
+## Installation
+Require this package with composer
 ```
-$ phpunit test/Psr4Test.php
+composer require seeren/loader dev-master
 ```
+
+## Run the tests
+Run with phpunit after install dependencies
+```
+composer update
+phpunit
+```
+
+## Authors
+* **Cyril Ichti** - [www.seeren.fr](http://www.seeren.fr)
