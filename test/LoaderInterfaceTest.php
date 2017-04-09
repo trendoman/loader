@@ -25,7 +25,7 @@ use Seeren\Loader\LoaderInterface;
  * @subpackage Test
  * @abstract
  */
-abstract class LoaderInterfaceTest extends \PHPUnit_Framework_TestCase
+abstract class LoaderInterfaceTest extends \PHPUnit\Framework\TestCase
 {
 
    /**
