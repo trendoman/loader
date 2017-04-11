@@ -141,12 +141,12 @@ class Psr4 extends Loader implements Psr4Interface, LoaderInterface
                 foreach ($baseDirectory as &$value) {
                     $value = $this->parseBaseDirectory((string) $value);
                 }
-            } else {
-                $baseDirectory = [
-                    $this->parseBaseDirectory((string) $baseDirectory)
+                $this->prefix[$parsedPrefix] = $baseDirectory;
+            } else if (is_string($baseDirectory)){
+                $this->prefix[$parsedPrefix] = [
+                    $this->parseBaseDirectory($baseDirectory)
                 ];
             }
-            $this->prefix[$parsedPrefix] = $baseDirectory;
         }
         return $this;
     }
