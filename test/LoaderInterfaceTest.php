@@ -10,7 +10,7 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link http://www.seeren.fr/ Seeren
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 namespace Seeren\Loader\Test;
@@ -51,7 +51,7 @@ abstract class LoaderInterfaceTest extends \PHPUnit\Framework\TestCase
        $stub = $this->getLoader();
        $nLoader = count(spl_autoload_functions());
        $stub->register();
-       $this->assertTrue(++$nLoader  === count(spl_autoload_functions()));
+       $this->assertTrue(1 + $nLoader  === count(spl_autoload_functions()));
    }
 
    /**
@@ -63,7 +63,7 @@ abstract class LoaderInterfaceTest extends \PHPUnit\Framework\TestCase
        $stub->register();
        $nLoader = count(spl_autoload_functions());
        $stub->unregister();
-       $this->assertTrue(--$nLoader  === count(spl_autoload_functions()));
+       $this->assertTrue($nLoader - 1  === count(spl_autoload_functions()));
    }
 
 }

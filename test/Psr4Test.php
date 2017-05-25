@@ -10,7 +10,7 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link http://www.seeren.fr/ Seeren
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 namespace Seeren\Loader\Test;
@@ -47,7 +47,8 @@ final class Psr4Test extends LoaderInterfaceTest
       $stub = (new ReflectionClass(Psr4::class))
               ->newInstanceArgs([__DIR__ . "/../"]);
       $stub->addPrefix("Seeren\\Loader\\", __DIR__ . "/../src");
-      $this->assertTrue($stub->load(ClassMap::class) || class_exists(ClassMap::class));
+      $this->assertTrue($stub->load(ClassMap::class)
+                     || class_exists(ClassMap::class));
    }
 
 }
