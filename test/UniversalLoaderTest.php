@@ -19,8 +19,8 @@ use Seeren\Loader\LoaderInterface;
 use Seeren\Loader\UniversalLoader;
 use Seeren\Loader\Psr4;
 use Seeren\Loader\ClassMap;
-use ReflectionClass;
 use Foo\Bar\UniversalLoaderFoo;
+use ReflectionClass;
 
 /**
  * Class for test UniversalLoader
