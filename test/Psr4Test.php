@@ -39,7 +39,7 @@ class Psr4Test extends AbstractLoaderTest
     */
    protected final function getLoader(): LoaderInterface
    {
-       return (new ReflectionClass(Psr4::class))->newInstanceArgs([""]);
+       return (new ReflectionClass(Psr4::class))->newInstanceArgs([]);
    }
 
    /**
@@ -88,8 +88,8 @@ class Psr4Test extends AbstractLoaderTest
    public function testAddPrefix()
    {
        $loader = $this->getLoader();
-       $loader->__construct(__DIR__);
-       $loader->addPrefix("Foo\\Bar\\", __DIR__ . "/mock");
+       $loader->__construct();
+       $loader->addPrefix("Foo\\Bar\\", "./test/mock");
        $this->assertTrue($loader->load(Psr4Foo::class));
    }
 
@@ -107,10 +107,10 @@ class Psr4Test extends AbstractLoaderTest
    public function testAddPrefixWithMultiBaseDirectory()
    {
        $loader = $this->getLoader();
-       $loader->__construct(__DIR__);
+       $loader->__construct();
        $loader->addPrefix("Foo\\Bar\\", [
-           __DIR__ . "/fake",
-           __DIR__ . "/mock",
+           "./test/fake",
+           "./test/mock",
            
        ]);
        $this->assertTrue($loader->load(Psr4Bar::class));
@@ -129,8 +129,8 @@ class Psr4Test extends AbstractLoaderTest
    public function testRemovePrefix()
    {
        $loader = $this->getLoader();
-       $loader->__construct(__DIR__);
-       $loader->addPrefix("Foo\\Bar\\", __DIR__ . "/mock");
+       $loader->__construct();
+       $loader->addPrefix("Foo\\Bar\\", "./test/mock");
        $loader->removePrefix("Foo\\Bar\\");
        $this->assertFalse($loader->load(Psr4Foo::class));
    }

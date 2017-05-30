@@ -41,7 +41,7 @@ class UniversalLoaderTest extends AbstractLoaderTest
    {
        return (new ReflectionClass(UniversalLoader::class))
        ->newInstanceArgs([
-           (new ReflectionClass(Psr4::class))->newInstanceArgs([__DIR__]),
+           (new ReflectionClass(Psr4::class))->newInstanceArgs([]),
            (new ReflectionClass(ClassMap::class))->newInstanceArgs([])
        ]);
    }
@@ -106,7 +106,7 @@ class UniversalLoaderTest extends AbstractLoaderTest
    public function testAddPrefix()
    {
        $loader = $this->getLoader();
-       $loader->addPrefix("Foo\\Bar\\", __DIR__ . "/mock");
+       $loader->addPrefix("Foo\\Bar\\", "./test/mock");
        $this->assertTrue($loader->load(UniversalLoaderFoo::class));
    }
 
@@ -131,7 +131,7 @@ class UniversalLoaderTest extends AbstractLoaderTest
    public function testRemovePrefix()
    {
        $loader = $this->getLoader();
-       $loader->compose(__DIR__ . "/psr4.json");
+       $loader->compose("./test/psr4.json");
        $loader->removePrefix("Foo\\Bar\\");
        $this->assertFalse($loader->load(UniversalLoaderFoo::class));
    }
@@ -155,7 +155,7 @@ class UniversalLoaderTest extends AbstractLoaderTest
        $loader = $this->getLoader();
        $loader->addClass(
            "UniversalLoaderBar",
-           __DIR__ . "/mock/UniversalLoaderBar.php");
+           "./test/mock/UniversalLoaderBar.php");
        $this->assertTrue($loader->load("UniversalLoaderBar"));
    }
 
@@ -179,7 +179,7 @@ class UniversalLoaderTest extends AbstractLoaderTest
        $loader = $this->getLoader();
        $loader->addClass(
            "UniversalLoaderBar",
-           __DIR__ . "/mock/UniversalLoaderBar.php");
+           "./test/mock/UniversalLoaderBar.php");
        $loader->removeClass("UniversalLoaderBar");
        $this->assertFalse($loader->load("UniversalLoaderBar"));
    }

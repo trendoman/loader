@@ -82,7 +82,7 @@ class ClassMapTest extends AbstractLoaderTest
    public function testAddAndRemoveClass()
    {
        $loader = $this->getLoader();
-       $loader->addClass("ClassMapFoo", __DIR__ . "/mock/ClassMapFoo.php");
+       $loader->addClass("ClassMapFoo", "./test/mock/ClassMapFoo.php");
        $this->assertTrue($loader->load("ClassMapFoo"));
    }
 
