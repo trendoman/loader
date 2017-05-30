@@ -73,6 +73,7 @@ class UniversalLoader extends Loader implements
      */
     public final function load(string $className): bool
     {
+        parent::load($className);
         if ($this->psr4->load($className)
          || $this->classMap->load($className)) {
             return true;
@@ -94,7 +95,7 @@ class UniversalLoader extends Loader implements
         && isset($config->{"autoload"}->{"psr-4"})) {
            $includePath = dirname($fileName) . DIRECTORY_SEPARATOR;
            foreach ($config->{"autoload"}->{"psr-4"} as $key => $value) {
-               $this->psr4->addPrefix($key, $includePath . $value);
+               $this->addPrefix($key, $includePath . $value);
            }
        }
        return $this;
