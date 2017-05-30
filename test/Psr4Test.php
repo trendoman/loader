@@ -10,7 +10,7 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link http://www.seeren.fr/ Seeren
- * @version 1.1.1
+ * @version 1.1.2
  */
 
 namespace Seeren\Loader\Test;
@@ -28,7 +28,6 @@ use ReflectionClass;
  * @category Seeren
  * @package Loader
  * @subpackage Test
- * @final
  */
 class Psr4Test extends AbstractLoaderTest
 {
