@@ -36,7 +36,7 @@ class ClassMapTest extends AbstractLoaderTest
     */
    protected final function getLoader(): LoaderInterface
    {
-       return (new ReflectionClass(ClassMap::class))->newInstanceArgs([""]);
+       return (new ReflectionClass(ClassMap::class))->newInstanceArgs([]);
    }
 
    /**
@@ -82,7 +82,6 @@ class ClassMapTest extends AbstractLoaderTest
    public function testAddAndRemoveClass()
    {
        $loader = $this->getLoader();
-       $loader->__construct(__DIR__);
        $loader->addClass("ClassMapFoo", __DIR__ . "/mock/ClassMapFoo.php");
        $this->assertTrue($loader->load("ClassMapFoo"));
    }
