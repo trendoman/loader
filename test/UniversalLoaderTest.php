@@ -131,7 +131,7 @@ class UniversalLoaderTest extends AbstractLoaderTest
    public function testRemovePrefix()
    {
        $loader = $this->getLoader();
-       $loader->compose("./psr4.json");
+       $loader->compose("./test/psr4.json");
        $loader->removePrefix("Foo\\Bar\\");
        $this->assertFalse($loader->load(UniversalLoaderFoo::class));
    }
