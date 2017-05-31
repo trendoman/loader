@@ -16,7 +16,7 @@ composer require seeren/loader dev-master
 ## Loader Usage
 
 #### `Seeren\Loader\Psr4`
-`Seeren\Log\Psr4`allow to load [psr-4](http://www.php-fig.org/psr/psr-0/) and [psr-4](http://www.php-fig.org/psr/psr-4/) class. You can use addPrefix to join a namespace prefix to a relative path based on the root project location
+`Seeren\Log\Psr4`allow to load [psr-0](http://www.php-fig.org/psr/psr-0/) and [psr-4](http://www.php-fig.org/psr/psr-4/) class. You can use addPrefix to join a namespace prefix to a relative path based on the root project location
 ```php
 (new Psr4)
 ->addPrefix("Acme\\Foo", "acme/src/foo/")
