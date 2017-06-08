@@ -47,7 +47,7 @@ class ClassMapTest extends AbstractLoaderTest
     */
    public function testLoadFalse()
    {
-       parent::testLoadFalse();
+       parent::assertLoadFalse();
    }
 
    /**

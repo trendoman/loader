@@ -38,7 +38,7 @@ abstract class AbstractLoaderTest extends \PHPUnit\Framework\TestCase
    /**
     * Assert load
     */
-   protected function testLoadFalse()
+   protected function assertLoadFalse()
    {
        $this->assertFalse($this->getLoader()->load(""));
    }

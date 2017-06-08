@@ -50,7 +50,7 @@ class Psr4Test extends AbstractLoaderTest
     */
    public function testLoadFalse()
    {
-       parent::testLoadFalse();
+       parent::assertLoadFalse();
    }
 
    /**

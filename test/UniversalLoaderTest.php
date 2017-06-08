@@ -59,7 +59,7 @@ class UniversalLoaderTest extends AbstractLoaderTest
     */
    public function testLoadFalse()
    {
-       parent::testLoadFalse();
+       parent::assertLoadFalse();
    }
 
    /**
