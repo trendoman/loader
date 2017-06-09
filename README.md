@@ -20,15 +20,13 @@ composer require seeren/loader dev-master
 ```php
 (new Psr4)
 ->addPrefix("Acme\\Foo", "acme/src/foo/")
+->addPrefix("Acme\\Bar", [
+    "acme/src/bar/",
+    "acme/test/bar/"
+]);
 ->register();
 ```
 addPrefix allow to add string or string collection for paths.
-```php
-$loader->addPrefix("Acme\\Foo", [
-    "acme/src/foo/",
-    "acme/test/foo/"
-]);
-```
 
 #### `Seeren\Loader\ClassMap`
 `Seeren\Log\ClassMap`allow to load class map. You can use addClass to join a class name to a relative file base name based on the root project location
@@ -69,4 +67,4 @@ Run [coveralls](https://coveralls.io/) for check coverage
 * **Cyril Ichti** - *Initial work* - [seeren](https://github.com/seeren)
 
 ## License
-This project is licensed under the **MIT License** - see the [license](LICENSE.md) file for details.
+This project is licensed under the **MIT License** - see the [license](LICENSE) file for details.
