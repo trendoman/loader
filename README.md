@@ -1,7 +1,8 @@
 # loader
-[![Build Status](https://travis-ci.org/seeren/loader.svg?branch=master)](https://travis-ci.org/seeren/loader) [![Coverage Status](https://coveralls.io/repos/github/seeren/loader/badge.svg?branch=master)](https://coveralls.io/github/seeren/loader?branch=master) [![Packagist](https://img.shields.io/packagist/dt/seeren/loader.svg)](https://packagist.org/packages/seeren/loader/stats) [![Packagist](https://img.shields.io/packagist/v/seeren/loader.svg)](https://packagist.org/packages/seeren/loader) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/79594fda319241f787ac5342cb0a1836)](https://www.codacy.com/app/seeren/loader?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=seeren/loader&amp;utm_campaign=Badge_Grade)
 
-Universal class loader
+[![Build Status](https://travis-ci.org/seeren/loader.svg?branch=master)](https://travis-ci.org/seeren/loader) [![Coverage Status](https://coveralls.io/repos/github/seeren/loader/badge.svg?branch=master)](https://coveralls.io/github/seeren/loader?branch=master) [![Packagist](https://img.shields.io/packagist/dt/seeren/loader.svg)](https://packagist.org/packages/seeren/loader/stats) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/79594fda319241f787ac5342cb0a1836)](https://www.codacy.com/app/seeren/loader?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=seeren/loader&amp;utm_campaign=Badge_Grade) [![Packagist](https://img.shields.io/packagist/v/seeren/loader.svg)](https://packagist.org/packages/seeren/loader) [![Packagist](https://img.shields.io/packagist/l/seeren/loader.svg)](LICENSE)
+
+**Universal class loader**
 
 ## Features
 * Load [Psr-4](http://www.php-fig.org/psr/psr-4/) class
