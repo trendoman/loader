@@ -1,7 +1,7 @@
 {
     "name": "seeren/loader",
     "description": "Universal class loader",
-    "keywords": ["loader", "psr-0", "psr-4", "class-map"],
+    "keywords": ["psr-0", "psr-4", "loader", "class-map"],
     "type": "library",
     "license": "MIT",
     "authors": [
