@@ -16,7 +16,7 @@
 namespace Seeren\Loader;
 
 /**
- * Class for class map oading
+ * Class for class map loading
  * 
  * @category Seeren
  * @package Loader
