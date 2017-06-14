@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1497471857">
-  <project timestamp="1497471857">
+<coverage generated="1497480379">
+  <project timestamp="1497480379">
     <package name="Seeren\Loader">
       <file name="C:\xampp\htdocs\seeren-dev-master\loader\src/ClassMap.php">
         <class name="ClassMap" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">

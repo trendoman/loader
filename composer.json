@@ -1,32 +1,36 @@
 {
-    "name": "seeren/loader",
-    "description": "Universal class loader",
-    "keywords": ["psr-0", "psr-4", "loader", "class-map"],
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-      {
-        "name": "Cyril Ichti",
-        "email": "consultant@seeren.fr",
-        "homepage" : "http://www.seeren.fr"
-      }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-      "php": ">=7.0.1"
-    },
-    "autoload": {
-      "psr-4": {
-		"Seeren\\Loader\\": "src/"
-      }
-    },
-    "autoload-dev": {
-      "psr-4": {
-		"Seeren\\Loader\\Test\\": "test/"
-      }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "6.1.*",
-        "satooshi/php-coveralls": "dev-master"
-    }
+	"name" : "seeren/loader",
+	"description" : "Universal class loader",
+	"keywords" : [
+		"psr-0",
+		"psr-4",
+		"loader",
+		"class-map"
+	],
+	"type" : "library",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Cyril Ichti",
+			"email" : "consultant@seeren.fr",
+			"homepage" : "http://www.seeren.fr"
+		}
+	],
+	"minimum-stability" : "dev",
+	"require" : {
+		"php" : ">=7.0.1"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Seeren\\Loader\\" : "src/"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"Seeren\\Loader\\Test\\" : "test/"
+		}
+	},
+	"require-dev" : {
+		"phpunit/phpunit" : "dev-master",
+		"satooshi/php-coveralls" : "dev-master"
+	}
 }
