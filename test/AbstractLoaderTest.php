@@ -10,7 +10,7 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/loader
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 namespace Seeren\Loader\Test;
@@ -36,17 +36,17 @@ abstract class AbstractLoaderTest extends \PHPUnit\Framework\TestCase
    abstract protected function getLoader(): LoaderInterface;
 
    /**
-    * Assert load
+    * Test load
     */
-   protected function assertLoadFalse()
+   public function testLoadFalse()
    {
        $this->assertFalse($this->getLoader()->load(""));
    }
 
    /**
-    * Assert register
+    * Test register
     */
-   protected function assertRegister()
+   public function testRegister()
    {
        $mock = $this->getLoader();
        $nLoader = count(spl_autoload_functions());
@@ -55,9 +55,9 @@ abstract class AbstractLoaderTest extends \PHPUnit\Framework\TestCase
    }
 
    /**
-    * Assert unregister
+    * Test unregister
     */
-   protected function assertUnregister()
+   public function testUnregister()
    {
        $mock = $this->getLoader();
        $mock->register();

@@ -10,7 +10,7 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/loader
- * @version 1.1.2
+ * @version 1.1.3
  */
 
 namespace Seeren\Loader\Test;
@@ -50,7 +50,7 @@ class Psr4Test extends AbstractLoaderTest
     */
    public function testLoadFalse()
    {
-       parent::assertLoadFalse();
+       parent::testLoadFalse();
    }
 
    /**
@@ -60,7 +60,7 @@ class Psr4Test extends AbstractLoaderTest
     */
    public function testRegister()
    {
-       parent::assertRegister();
+       parent::testRegister();
    }
 
    /**
@@ -71,7 +71,7 @@ class Psr4Test extends AbstractLoaderTest
     */
    public function testUnregister()
    {
-       parent::assertUnregister();
+       parent::testUnregister();
    }
 
    /**

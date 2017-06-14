@@ -10,7 +10,7 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/loader
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 namespace Seeren\Loader\Test;
@@ -59,7 +59,7 @@ class UniversalLoaderTest extends AbstractLoaderTest
     */
    public function testLoadFalse()
    {
-       parent::assertLoadFalse();
+       parent::testLoadFalse();
    }
 
    /**
@@ -71,7 +71,7 @@ class UniversalLoaderTest extends AbstractLoaderTest
     */
    public function testRegister()
    {
-       parent::assertRegister();
+       parent::testRegister();
    }
 
    /**
@@ -84,7 +84,7 @@ class UniversalLoaderTest extends AbstractLoaderTest
     */
    public function testUnregister()
    {
-       parent::assertUnregister();
+       parent::testUnregister();
    }
 
    /**
