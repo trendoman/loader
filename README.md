@@ -38,7 +38,7 @@ Load non standard class as old library like [FPDF](http://www.fpdf.org/) or some
 ->addClass("Acme_Foo", "acme/AcmeFoo.php")
 ->register();
 ```
-ClassMap allow to load class map. You can use addClass to join a classes name to a relative file base name based on the root project location
+ClassMap allow to load class map. You can use addClass to join a class name to a relative file base name based on the root project location
 
 #### `Seeren\Loader\UniverSalLoader`
 Use a [chain of responsibility](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern) for load standard and no standard class in a very performant way
@@ -48,7 +48,7 @@ Use a [chain of responsibility](https://en.wikipedia.org/wiki/Chain-of-responsib
 ->addClass("Acme_Foo", "acme/AcmeFoo.php")
 ->register();
 ```
-The loader can use a composer.json file for add prefixes
+The loader can use a composer.json file to add prefixes
 ```php
 $loader->compose("../composer.json")
 ->register();
