@@ -5,7 +5,8 @@
 **Universal class loader**
 
 ## Features
-* Load [Psr-4](http://www.php-fig.org/psr/psr-4/) class
+* Load [Psr-0](http://www.php-fig.org/psr/psr-0/)
+* Load [Psr-4](http://www.php-fig.org/psr/psr-4/)
 * Load class map
 
 ## Installation
@@ -17,7 +18,8 @@ composer require seeren/loader dev-master
 ## Loader Usage
 
 #### `Seeren\Loader\Psr4`
-`Seeren\Log\Psr4`allow to load [psr-0](http://www.php-fig.org/psr/psr-0/) and [psr-4](http://www.php-fig.org/psr/psr-4/) class. You can use addPrefix to join a namespace prefix to a relative path based on the root project location
+Use Psr4 for load standard classes. If you do not use composer or if you want to provide extra classes for the script, Psr4 provide easy way to declare class that can be loaded.
+
 ```php
 (new Psr4)
 ->addPrefix("Acme\\Foo", "acme/src/foo/")
@@ -27,24 +29,31 @@ composer require seeren/loader dev-master
 ]);
 ->register();
 ```
-addPrefix allow to add string or string collection for paths.
+Psr4 class allow to load [psr-0](http://www.php-fig.org/psr/psr-0/) and [psr-4](http://www.php-fig.org/psr/psr-4/). You can use addPrefix to join a namespace prefix to a relative path based on the root project location,  addPrefix allow to add string or string collection for paths
 
 #### `Seeren\Loader\ClassMap`
-`Seeren\Log\ClassMap`allow to load class map. You can use addClass to join a class name to a relative file base name based on the root project location
+Load non standard class as old library like [FPDF](http://www.fpdf.org/) or some [PEAR](https://pear.php.net/) packages
 ```php
 (new ClassMap)
 ->addClass("Acme_Foo", "acme/AcmeFoo.php")
 ->register();
 ```
+ClassMap allow to load class map. You can use addClass to join a classes name to a relative file base name based on the root project location
 
 #### `Seeren\Loader\UniverSalLoader`
-Use a [chain of responsibility](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern) for psr and class map loaders
+Use a [chain of responsibility](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern) for load standard and no standard class in a very performant way
 ```php
 (new UniverSalLoader(new Psr4, new ClassMap))
 ->addPrefix("Acme\\Foo", "acme/src/foo/")
 ->addClass("Acme_Foo", "acme/AcmeFoo.php")
 ->register();
 ```
+The loader can use a composer.json file for add prefixes
+```php
+$loader->compose("../composer.json")
+->register();
+```
+
 ## Run Unit tests
 Install dependencies
 ```
