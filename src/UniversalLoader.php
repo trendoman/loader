@@ -89,13 +89,15 @@ class UniversalLoader extends Loader implements
      */
     public final function compose(string $fileName): LoaderInterface
     {
-       if (is_file($fileName)
-        && ($config = json_decode(file_get_contents($fileName)))
-        && isset($config->{"autoload"})
-        && isset($config->{"autoload"}->{"psr-4"})) {
-           $includePath = dirname($fileName) . DIRECTORY_SEPARATOR;
-           foreach ($config->{"autoload"}->{"psr-4"} as $key => $value) {
-               $this->addPrefix($key, $includePath . $value);
+       if (is_file($fileName)){
+           $config = json_decode(file_get_contents($fileName));
+           if (is_object($config)
+            && isset($config->{"autoload"})
+            && isset($config->{"autoload"}->{"psr-4"})) {
+               $includePath = dirname($fileName) . DIRECTORY_SEPARATOR;
+               foreach ($config->{"autoload"}->{"psr-4"} as $key => $value) {
+                   $this->addPrefix($key, $includePath . $value);
+               }
            }
        }
        return $this;

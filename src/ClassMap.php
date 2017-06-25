@@ -10,7 +10,7 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/loader
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 namespace Seeren\Loader;
@@ -62,17 +62,15 @@ class ClassMap extends Loader implements ClassMapInterface, LoaderInterface
      * Add class
      *
      * @param string $className class name
-     * @param string $classPath class path
+     * @param string $path class path
      * @return LoaderInterface static
      */
     public final function addClass(
         string $className,
-        string $classPath): LoaderInterface
+        string $path): LoaderInterface
     {
         if (!array_key_exists($className, $this->className)) {
-            $this->className[$className] = ltrim(
-                $classPath,
-                DIRECTORY_SEPARATOR);
+            $this->className[$className] = ltrim($path, DIRECTORY_SEPARATOR);
         }
         return $this;
     }
