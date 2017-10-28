@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1498432161">
-  <project timestamp="1498432161">
+<coverage generated="1509200997">
+  <project timestamp="1509200997">
     <package name="Seeren\Loader">
-      <file name="C:\xampp\htdocs\seeren-dev-master\loader\src/ClassMap.php">
+      <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/ClassMap.php">
         <class name="ClassMap" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
           <metrics complexity="7" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="18" coveredelements="18"/>
         </class>
@@ -26,7 +26,7 @@
         <line num="89" type="stmt" count="3"/>
         <metrics loc="92" ncloc="46" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="18" coveredelements="18"/>
       </file>
-      <file name="C:\xampp\htdocs\seeren-dev-master\loader\src/Loader.php">
+      <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/Loader.php">
         <class name="Loader" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
           <metrics complexity="6" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
         </class>
@@ -45,7 +45,7 @@
         <line num="79" type="stmt" count="3"/>
         <metrics loc="82" ncloc="36" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
       </file>
-      <file name="C:\xampp\htdocs\seeren-dev-master\loader\src/Psr4.php">
+      <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/Psr4.php">
         <class name="Psr4" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
           <metrics complexity="18" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="40" elements="48" coveredelements="48"/>
         </class>
@@ -99,7 +99,7 @@
         <line num="166" type="stmt" count="2"/>
         <metrics loc="169" ncloc="97" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="40" elements="48" coveredelements="48"/>
       </file>
-      <file name="C:\xampp\htdocs\seeren-dev-master\loader\src/UniversalLoader.php">
+      <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/UniversalLoader.php">
         <class name="UniversalLoader" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
           <metrics complexity="15" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="35" coveredelements="35"/>
         </class>
@@ -141,16 +141,16 @@
         <metrics loc="160" ncloc="85" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="35" coveredelements="35"/>
       </file>
     </package>
-    <file name="C:\xampp\htdocs\seeren-dev-master\loader\src/ClassMapInterface.php">
+    <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/ClassMapInterface.php">
       <metrics loc="46" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\seeren-dev-master\loader\src/LoaderInterface.php">
+    <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/LoaderInterface.php">
       <metrics loc="49" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\seeren-dev-master\loader\src/Psr4Interface.php">
+    <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/Psr4Interface.php">
       <metrics loc="45" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\seeren-dev-master\loader\src/UniversalLoaderInterface.php">
+    <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/UniversalLoaderInterface.php">
       <metrics loc="34" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <metrics files="8" loc="677" ncloc="318" classes="4" methods="24" coveredmethods="24" conditionals="0" coveredconditionals="0" statements="90" coveredstatements="90" elements="114" coveredelements="114"/>
