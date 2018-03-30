@@ -6,7 +6,7 @@
 > This package contain implementations of the [PSR-4 autoloader](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md)
 
 ## Features
-* Load [psr-0](http://www.php-fig.org/psr/psr-0/), [psr-4](http://www.php-fig.org/psr/psr-4/) and class map
+* [Psr-0](http://www.php-fig.org/psr/psr-0/), [Psr-4](http://www.php-fig.org/psr/psr-4/) and class map loader
 
 ## Installation
 Require this package with [composer](https://getcomposer.org/)
@@ -14,63 +14,42 @@ Require this package with [composer](https://getcomposer.org/)
 composer require seeren/loader dev-master
 ```
 
-## Loader Usage
-
+## Usage
 #### `Seeren\Loader\Psr4`
-Use Psr4 for load standard classes. If you do not use composer or if you want to provide extra classes for the script, Psr4 provide easy way to declare class that can be loaded. Use addPrefix to join a namespace prefix to a relative path based on the root project location,  addPrefix allow to add string or string collection for paths
+Load prefixed classes
 ```php
 (new Psr4)
-->addPrefix("Acme\\Foo", "acme/src/foo/")
-->addPrefix("Acme\\Bar", [
-    "acme/src/bar/",
-    "acme/test/bar/"
-]);
+->addPrefix("Acme\\Bar", ["acme/src/bar/"])
 ->register();
 ```
 
 #### `Seeren\Loader\ClassMap`
-Load non standard class like old library or some [PEAR](https://pear.php.net/) packages. You can use addClass to join a class name to a relative file base name based on the root project location
+Load unnamespaced classes
 ```php
 (new ClassMap)
 ->addClass("Acme_Foo", "acme/AcmeFoo.php")
 ->register();
 ```
 
-#### `Seeren\Loader\UniverSalLoader`
-Use a [chain of responsibility](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern) for load standard and no standard class in a very performant way
+#### `Seeren\Loader\UniversalLoader`
+Load from a composer file
 ```php
 (new UniverSalLoader(new Psr4, new ClassMap))
-->addPrefix("Acme\\Foo", "acme/src/foo/")
-->addClass("Acme_Foo", "acme/AcmeFoo.php")
-->register();
-```
-The loader can use a composer.json file to add prefixes
-```php
-$loader->compose("../composer.json")
+->compose("../composer.json")
 ->register();
 ```
 
-## Run Unit tests
-Install dependencies
-```
-composer update
-```
-Run [phpunit](https://phpunit.de/) with [Xdebug](https://xdebug.org/) enabled and [OPcache](http://php.net/manual/fr/book.opcache.php) disabled for coverage
+## Run tests
+Run [phpunit](https://phpunit.de/) with [Xdebug](https://xdebug.org/) enable and [OPcache](http://php.net/manual/fr/book.opcache.php) disable
 ```
 ./vendor/bin/phpunit
 ```
-## Run Coverage
-Install dependencies
-```
-composer update
-```
-Run [coveralls](https://coveralls.io/) for check coverage
-```
-./vendor/bin/coveralls -v
-```
 
-##  Contributors
-* **Cyril Ichti** - *Initial work* - [seeren](https://github.com/seeren)
+## Run Coverage
+Run [coveralls](https://coveralls.io/)
+```
+./vendor/bin/php-coveralls -v
+```
 
 ## License
 This project is licensed under the **MIT License** - see the [license](LICENSE) file for details.
