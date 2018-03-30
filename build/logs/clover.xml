@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1509200997">
-  <project timestamp="1509200997">
+<coverage generated="1522435846">
+  <project timestamp="1522435846">
     <package name="Seeren\Loader">
       <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/ClassMap.php">
-        <class name="ClassMap" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
+        <class name="Seeren\Loader\ClassMap" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
           <metrics complexity="7" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="18" coveredelements="18"/>
         </class>
         <line num="39" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="11"/>
@@ -27,7 +27,7 @@
         <metrics loc="92" ncloc="46" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="18" coveredelements="18"/>
       </file>
       <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/Loader.php">
-        <class name="Loader" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
+        <class name="Seeren\Loader\Loader" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
           <metrics complexity="6" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
         </class>
         <line num="41" type="method" name="__construct" visibility="protected" complexity="1" crap="1" count="17"/>
@@ -46,7 +46,7 @@
         <metrics loc="82" ncloc="36" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
       </file>
       <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/Psr4.php">
-        <class name="Psr4" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
+        <class name="Seeren\Loader\Psr4" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
           <metrics complexity="18" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="40" elements="48" coveredelements="48"/>
         </class>
         <line num="39" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="13"/>
@@ -100,7 +100,7 @@
         <metrics loc="169" ncloc="97" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="40" elements="48" coveredelements="48"/>
       </file>
       <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/UniversalLoader.php">
-        <class name="UniversalLoader" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
+        <class name="Seeren\Loader\UniversalLoader" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
           <metrics complexity="15" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="35" coveredelements="35"/>
         </class>
         <line num="48" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
