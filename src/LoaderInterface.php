@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file contain Seeren\Loader\LoaderInterface interface
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @author (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/loader
  * @version 1.0.1
  */

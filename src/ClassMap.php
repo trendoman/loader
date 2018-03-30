@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file contain Seeren\Loader\ClassMap class
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @author (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/loader
  * @version 1.0.2
  */
@@ -26,13 +25,11 @@ class ClassMap extends Loader implements ClassMapInterface, LoaderInterface
 
     private
         /**
-         * @var array class name collection
+         * @var array
          */
         $className;
 
     /**
-     * Construct ClassMap
-     * 
      * @param string $includePath include path
      * @return null
      */
@@ -43,10 +40,8 @@ class ClassMap extends Loader implements ClassMapInterface, LoaderInterface
     }
 
     /**
-     * Template method Get file name
-     *
-     * @param string $className class name
-     * @return string file name
+     * {@inheritDoc}
+     * @see \Seeren\Loader\Loader::fileName()
      */
     protected final function fileName(string $className): string
     {
@@ -59,11 +54,8 @@ class ClassMap extends Loader implements ClassMapInterface, LoaderInterface
     }
 
     /**
-     * Add class
-     *
-     * @param string $className class name
-     * @param string $path class path
-     * @return LoaderInterface static
+     * {@inheritDoc}
+     * @see \Seeren\Loader\ClassMapInterface::addClass()
      */
     public final function addClass(
         string $className,
@@ -76,10 +68,8 @@ class ClassMap extends Loader implements ClassMapInterface, LoaderInterface
     }
 
     /**
-     * Remove class
-     * 
-     * @param string $className class name
-     * @return LoaderInterface static
+     * {@inheritDoc}
+     * @see \Seeren\Loader\ClassMapInterface::removeClass()
      */
     public final function removeClass(string $className): LoaderInterface
     {

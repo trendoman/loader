@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file contain Seeren\Loader\Test\ClassMapTest class
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @author (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/loader
  * @version 1.1.3
  */
@@ -30,9 +29,8 @@ class ClassMapTest extends AbstractLoaderTest
 {
 
    /**
-    * Get LoaderInterface
-    *
-    * @return LoaderInterface loader
+    * {@inheritDoc}
+    * @see \Seeren\Loader\Test\AbstractLoaderTest::getLoader()
     */
    protected final function getLoader(): LoaderInterface
    {

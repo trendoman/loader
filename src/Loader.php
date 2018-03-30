@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file contain Seeren\Loader\Loader class
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @author (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/loader
  * @version 1.0.1
  */
@@ -34,19 +33,15 @@ abstract class Loader
    abstract protected function fileName(string $className): string;
 
    /**
-    * Construct Loader
-    * 
-    * @return null
+    * @constructor
     */
    protected function __construct()
    {
    }
 
    /**
-    * Load file for className
-    *
-    * @param string $className class name
-    * @return bool loaded or not
+    * {@inheritDoc}
+    * @see \Seeren\Loader\LoaderInterface::load()
     */
    public function load(string $className): bool
    {
@@ -58,9 +53,8 @@ abstract class Loader
    }
 
    /**
-    * Register
-    *
-    * @return LoaderInterface static
+    * {@inheritDoc}
+    * @see \Seeren\Loader\LoaderInterface::register()
     */
    public final function register(): LoaderInterface
    {
@@ -69,9 +63,8 @@ abstract class Loader
    }
 
    /**
-    * Unregister
-    *
-    * @return LoaderInterface static
+    * {@inheritDoc}
+    * @see \Seeren\Loader\LoaderInterface::unregister()
     */
    public final function unregister(): LoaderInterface
    {

@@ -1,158 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1522435846">
-  <project timestamp="1522435846">
+<coverage generated="1522437221">
+  <project timestamp="1522437221">
     <package name="Seeren\Loader">
       <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/ClassMap.php">
         <class name="Seeren\Loader\ClassMap" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
           <metrics complexity="7" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="18" coveredelements="18"/>
         </class>
-        <line num="39" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="11"/>
-        <line num="41" type="stmt" count="11"/>
-        <line num="42" type="stmt" count="11"/>
-        <line num="43" type="stmt" count="11"/>
-        <line num="51" type="method" name="fileName" visibility="protected" complexity="2" crap="2" count="6"/>
+        <line num="36" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="38" type="stmt" count="11"/>
+        <line num="39" type="stmt" count="11"/>
+        <line num="40" type="stmt" count="11"/>
+        <line num="46" type="method" name="fileName" visibility="protected" complexity="2" crap="2" count="6"/>
+        <line num="48" type="stmt" count="6"/>
+        <line num="49" type="stmt" count="6"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
         <line num="53" type="stmt" count="6"/>
-        <line num="54" type="stmt" count="6"/>
-        <line num="55" type="stmt" count="2"/>
-        <line num="56" type="stmt" count="2"/>
-        <line num="58" type="stmt" count="6"/>
-        <line num="68" type="method" name="addClass" visibility="public" complexity="2" crap="2" count="3"/>
-        <line num="72" type="stmt" count="3"/>
-        <line num="73" type="stmt" count="3"/>
-        <line num="75" type="stmt" count="3"/>
-        <line num="84" type="method" name="removeClass" visibility="public" complexity="2" crap="2" count="3"/>
-        <line num="86" type="stmt" count="3"/>
-        <line num="87" type="stmt" count="3"/>
-        <line num="89" type="stmt" count="3"/>
-        <metrics loc="92" ncloc="46" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="18" coveredelements="18"/>
+        <line num="60" type="method" name="addClass" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="64" type="stmt" count="3"/>
+        <line num="65" type="stmt" count="3"/>
+        <line num="67" type="stmt" count="3"/>
+        <line num="74" type="method" name="removeClass" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="76" type="stmt" count="3"/>
+        <line num="77" type="stmt" count="3"/>
+        <line num="79" type="stmt" count="3"/>
+        <metrics loc="82" ncloc="46" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="18" coveredelements="18"/>
       </file>
       <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/Loader.php">
         <class name="Seeren\Loader\Loader" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
           <metrics complexity="6" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
         </class>
-        <line num="41" type="method" name="__construct" visibility="protected" complexity="1" crap="1" count="17"/>
-        <line num="43" type="stmt" count="17"/>
-        <line num="51" type="method" name="load" visibility="public" complexity="2" crap="2" count="11"/>
-        <line num="53" type="stmt" count="11"/>
-        <line num="54" type="stmt" count="5"/>
-        <line num="55" type="stmt" count="5"/>
-        <line num="57" type="stmt" count="8"/>
-        <line num="65" type="method" name="register" visibility="public" complexity="1" crap="1" count="6"/>
-        <line num="67" type="stmt" count="6"/>
-        <line num="68" type="stmt" count="6"/>
-        <line num="76" type="method" name="unregister" visibility="public" complexity="1" crap="1" count="3"/>
-        <line num="78" type="stmt" count="3"/>
-        <line num="79" type="stmt" count="3"/>
-        <metrics loc="82" ncloc="36" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
+        <line num="38" type="method" name="__construct" visibility="protected" complexity="1" crap="1" count="17"/>
+        <line num="40" type="stmt" count="17"/>
+        <line num="46" type="method" name="load" visibility="public" complexity="2" crap="2" count="11"/>
+        <line num="48" type="stmt" count="11"/>
+        <line num="49" type="stmt" count="5"/>
+        <line num="50" type="stmt" count="5"/>
+        <line num="52" type="stmt" count="8"/>
+        <line num="59" type="method" name="register" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="61" type="stmt" count="6"/>
+        <line num="62" type="stmt" count="6"/>
+        <line num="69" type="method" name="unregister" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="71" type="stmt" count="3"/>
+        <line num="72" type="stmt" count="3"/>
+        <metrics loc="75" ncloc="36" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
       </file>
       <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/Psr4.php">
         <class name="Seeren\Loader\Psr4" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
-          <metrics complexity="18" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="40" elements="48" coveredelements="48"/>
+          <metrics complexity="18" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="38" elements="46" coveredelements="46"/>
         </class>
-        <line num="39" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="13"/>
-        <line num="41" type="stmt" count="13"/>
-        <line num="42" type="stmt" count="13"/>
-        <line num="43" type="stmt" count="13"/>
-        <line num="51" type="method" name="parsePrefix" visibility="private" complexity="1" crap="1" count="5"/>
-        <line num="53" type="stmt" count="5"/>
-        <line num="62" type="method" name="parseBaseDirectory" visibility="private" complexity="1" crap="1" count="5"/>
-        <line num="64" type="stmt" count="5"/>
-        <line num="74" type="method" name="parseFileName" visibility="private" complexity="1" crap="1" count="3"/>
-        <line num="78" type="stmt" count="3"/>
-        <line num="79" type="stmt" count="3"/>
-        <line num="80" type="stmt" count="3"/>
+        <line num="36" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="38" type="stmt" count="13"/>
+        <line num="39" type="stmt" count="13"/>
+        <line num="40" type="stmt" count="13"/>
+        <line num="46" type="method" name="parsePrefix" visibility="private" complexity="1" crap="1" count="5"/>
+        <line num="48" type="stmt" count="5"/>
+        <line num="55" type="method" name="parseBaseDirectory" visibility="private" complexity="1" crap="1" count="5"/>
+        <line num="57" type="stmt" count="5"/>
+        <line num="65" type="method" name="parseFileName" visibility="private" complexity="1" crap="1" count="3"/>
+        <line num="69" type="stmt" count="3"/>
+        <line num="70" type="stmt" count="3"/>
+        <line num="71" type="stmt" count="3"/>
+        <line num="79" type="method" name="find" visibility="private" complexity="3" crap="3" count="3"/>
+        <line num="81" type="stmt" count="3"/>
         <line num="82" type="stmt" count="3"/>
         <line num="83" type="stmt" count="3"/>
-        <line num="93" type="method" name="find" visibility="private" complexity="3" crap="3" count="3"/>
-        <line num="95" type="stmt" count="3"/>
-        <line num="96" type="stmt" count="3"/>
-        <line num="97" type="stmt" count="3"/>
-        <line num="98" type="stmt" count="3"/>
-        <line num="100" type="stmt" count="1"/>
-        <line num="102" type="stmt" count="3"/>
-        <line num="111" type="method" name="fileName" visibility="protected" complexity="4" crap="4" count="9"/>
-        <line num="113" type="stmt" count="9"/>
-        <line num="114" type="stmt" count="9"/>
-        <line num="115" type="stmt" count="9"/>
-        <line num="116" type="stmt" count="5"/>
-        <line num="117" type="stmt" count="5"/>
-        <line num="118" type="stmt" count="5"/>
+        <line num="84" type="stmt" count="3"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="88" type="stmt" count="3"/>
+        <line num="95" type="method" name="fileName" visibility="protected" complexity="4" crap="4" count="9"/>
+        <line num="97" type="stmt" count="9"/>
+        <line num="98" type="stmt" count="9"/>
+        <line num="99" type="stmt" count="9"/>
+        <line num="100" type="stmt" count="5"/>
+        <line num="101" type="stmt" count="5"/>
+        <line num="102" type="stmt" count="5"/>
+        <line num="103" type="stmt" count="5"/>
+        <line num="104" type="stmt" count="3"/>
+        <line num="106" type="stmt" count="2"/>
+        <line num="108" type="stmt" count="9"/>
+        <line num="115" type="method" name="addPrefix" visibility="public" complexity="5" crap="5" count="5"/>
         <line num="119" type="stmt" count="5"/>
-        <line num="120" type="stmt" count="3"/>
-        <line num="122" type="stmt" count="2"/>
-        <line num="124" type="stmt" count="9"/>
-        <line num="134" type="method" name="addPrefix" visibility="public" complexity="5" crap="5" count="5"/>
-        <line num="138" type="stmt" count="5"/>
-        <line num="139" type="stmt" count="5"/>
-        <line num="140" type="stmt" count="5"/>
-        <line num="141" type="stmt" count="1"/>
-        <line num="142" type="stmt" count="1"/>
-        <line num="144" type="stmt" count="1"/>
-        <line num="145" type="stmt" count="4"/>
-        <line num="146" type="stmt" count="4"/>
-        <line num="147" type="stmt" count="4"/>
-        <line num="151" type="stmt" count="5"/>
-        <line num="160" type="method" name="removePrefix" visibility="public" complexity="2" crap="2" count="2"/>
-        <line num="162" type="stmt" count="2"/>
-        <line num="163" type="stmt" count="2"/>
-        <line num="164" type="stmt" count="2"/>
-        <line num="166" type="stmt" count="2"/>
-        <metrics loc="169" ncloc="97" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="40" elements="48" coveredelements="48"/>
+        <line num="120" type="stmt" count="5"/>
+        <line num="121" type="stmt" count="5"/>
+        <line num="122" type="stmt" count="1"/>
+        <line num="123" type="stmt" count="1"/>
+        <line num="125" type="stmt" count="1"/>
+        <line num="126" type="stmt" count="4"/>
+        <line num="127" type="stmt" count="4"/>
+        <line num="128" type="stmt" count="4"/>
+        <line num="132" type="stmt" count="5"/>
+        <line num="139" type="method" name="removePrefix" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="141" type="stmt" count="2"/>
+        <line num="142" type="stmt" count="2"/>
+        <line num="143" type="stmt" count="2"/>
+        <line num="145" type="stmt" count="2"/>
+        <metrics loc="148" ncloc="94" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="38" elements="46" coveredelements="46"/>
       </file>
       <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/UniversalLoader.php">
         <class name="Seeren\Loader\UniversalLoader" namespace="Seeren\Loader" fullPackage="Loader" category="Seeren" package="Loader">
           <metrics complexity="15" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="35" coveredelements="35"/>
         </class>
-        <line num="48" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="52" type="stmt" count="7"/>
-        <line num="53" type="stmt" count="7"/>
-        <line num="54" type="stmt" count="7"/>
-        <line num="55" type="stmt" count="7"/>
-        <line num="63" type="method" name="fileName" visibility="protected" complexity="1" crap="1" count="5"/>
-        <line num="65" type="stmt" count="5"/>
-        <line num="74" type="method" name="load" visibility="public" complexity="3" crap="3" count="5"/>
-        <line num="76" type="stmt" count="5"/>
-        <line num="77" type="stmt" count="5"/>
-        <line num="78" type="stmt" count="5"/>
-        <line num="79" type="stmt" count="2"/>
-        <line num="81" type="stmt" count="3"/>
-        <line num="90" type="method" name="compose" visibility="public" complexity="6" crap="6" count="1"/>
-        <line num="92" type="stmt" count="1"/>
+        <line num="44" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="48" type="stmt" count="7"/>
+        <line num="49" type="stmt" count="7"/>
+        <line num="50" type="stmt" count="7"/>
+        <line num="51" type="stmt" count="7"/>
+        <line num="57" type="method" name="fileName" visibility="protected" complexity="1" crap="1" count="5"/>
+        <line num="59" type="stmt" count="5"/>
+        <line num="66" type="method" name="load" visibility="public" complexity="3" crap="3" count="5"/>
+        <line num="68" type="stmt" count="5"/>
+        <line num="69" type="stmt" count="5"/>
+        <line num="70" type="stmt" count="5"/>
+        <line num="71" type="stmt" count="2"/>
+        <line num="73" type="stmt" count="3"/>
+        <line num="80" type="method" name="compose" visibility="public" complexity="6" crap="6" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="85" type="stmt" count="1"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="88" type="stmt" count="1"/>
+        <line num="89" type="stmt" count="1"/>
         <line num="93" type="stmt" count="1"/>
-        <line num="94" type="stmt" count="1"/>
-        <line num="95" type="stmt" count="1"/>
-        <line num="96" type="stmt" count="1"/>
-        <line num="97" type="stmt" count="1"/>
-        <line num="98" type="stmt" count="1"/>
-        <line num="99" type="stmt" count="1"/>
-        <line num="103" type="stmt" count="1"/>
-        <line num="113" type="method" name="addPrefix" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="117" type="stmt" count="2"/>
-        <line num="118" type="stmt" count="2"/>
-        <line num="127" type="method" name="removePrefix" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="129" type="stmt" count="1"/>
-        <line num="130" type="stmt" count="1"/>
-        <line num="140" type="method" name="addClass" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="144" type="stmt" count="2"/>
-        <line num="145" type="stmt" count="2"/>
-        <line num="154" type="method" name="removeClass" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="156" type="stmt" count="1"/>
-        <line num="157" type="stmt" count="1"/>
-        <metrics loc="160" ncloc="85" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="35" coveredelements="35"/>
+        <line num="100" type="method" name="addPrefix" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="104" type="stmt" count="2"/>
+        <line num="105" type="stmt" count="2"/>
+        <line num="112" type="method" name="removePrefix" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="114" type="stmt" count="1"/>
+        <line num="115" type="stmt" count="1"/>
+        <line num="122" type="method" name="addClass" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="126" type="stmt" count="2"/>
+        <line num="127" type="stmt" count="2"/>
+        <line num="134" type="method" name="removeClass" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="136" type="stmt" count="1"/>
+        <line num="137" type="stmt" count="1"/>
+        <metrics loc="140" ncloc="85" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="35" coveredelements="35"/>
       </file>
     </package>
     <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/ClassMapInterface.php">
-      <metrics loc="46" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      <metrics loc="45" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/LoaderInterface.php">
-      <metrics loc="49" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      <metrics loc="48" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/Psr4Interface.php">
-      <metrics loc="45" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      <metrics loc="44" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <file name="C:\xampp\htdocs\dev-master.seeren\loader\src/UniversalLoaderInterface.php">
       <metrics loc="34" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <metrics files="8" loc="677" ncloc="318" classes="4" methods="24" coveredmethods="24" conditionals="0" coveredconditionals="0" statements="90" coveredstatements="90" elements="114" coveredelements="114"/>
+    <metrics files="8" loc="616" ncloc="315" classes="4" methods="24" coveredmethods="24" conditionals="0" coveredconditionals="0" statements="88" coveredstatements="88" elements="112" coveredelements="112"/>
   </project>
 </coverage>

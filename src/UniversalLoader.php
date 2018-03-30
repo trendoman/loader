@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file contain Seeren\Loader\UniversalLoader class
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @author (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/loader
  * @version 1.0.1
  */
@@ -30,20 +29,17 @@ class UniversalLoader extends Loader implements
 
    private
        /**
-        * @var Psr4 psr-4 loader
+        * @var Psr4
         */
        $psr4,
        /**
-        * @var ClassMap class map loader
+        * @var ClassMap
         */
        $classMap;
 
     /**
-     * Construct UniversalLoader
-     * 
      * @param Psr4Interface $psr4 psr-4 loader
      * @param ClassMapInterface $classMap class map loader
-     * @return null
      */
     public final function __construct(
         Psr4Interface $psr4,
@@ -55,10 +51,8 @@ class UniversalLoader extends Loader implements
     }
 
     /**
-     * Template method Get file name
-     *
-     * @param string $className class name
-     * @return string file name
+     * {@inheritDoc}
+     * @see \Seeren\Loader\Loader::fileName()
      */
     protected final function fileName(string $className): string
     {
@@ -66,10 +60,8 @@ class UniversalLoader extends Loader implements
     }
 
     /**
-     * Load file for className
-     *
-     * @param string $className class name
-     * @return bool loaded or not
+     * {@inheritDoc}
+     * @see \Seeren\Loader\Loader::load()
      */
     public final function load(string $className): bool
     {
@@ -82,10 +74,8 @@ class UniversalLoader extends Loader implements
     }
 
     /**
-     * Compose loader
-     * 
-     * @param string $fileName
-     * @return LoaderInterface static
+     * {@inheritDoc}
+     * @see \Seeren\Loader\UniversalLoaderInterface::compose()
      */
     public final function compose(string $fileName): LoaderInterface
     {
@@ -104,11 +94,8 @@ class UniversalLoader extends Loader implements
     }
 
     /**
-     * Add prefix
-     *
-     * @param string $prefix namespace prefix
-     * @param string|array $baseDirectory base directory
-     * @return LoaderInterface static
+     * {@inheritDoc}
+     * @see \Seeren\Loader\Psr4Interface::addPrefix()
      */
     public final function addPrefix(
         string $prefix,
@@ -119,10 +106,8 @@ class UniversalLoader extends Loader implements
     }
 
     /**
-     * Remove prefix
-     *
-     * @param string $prefixe namespace prefix
-     * @return LoaderInterface static
+     * {@inheritDoc}
+     * @see \Seeren\Loader\Psr4Interface::removePrefix()
      */
     public final function removePrefix(string $prefix): LoaderInterface
     {
@@ -131,11 +116,8 @@ class UniversalLoader extends Loader implements
     }
 
     /**
-     * Add class
-     *
-     * @param string $className class name
-     * @param string $classPath class path
-     * @return LoaderInterface static
+     * {@inheritDoc}
+     * @see \Seeren\Loader\ClassMapInterface::addClass()
      */
     public final function addClass(
         string $className,
@@ -146,10 +128,8 @@ class UniversalLoader extends Loader implements
     }
 
     /**
-     * Remove class
-     *
-     * @param string $className class name
-     * @return LoaderInterface static
+     * {@inheritDoc}
+     * @see \Seeren\Loader\ClassMapInterface::removeClass()
      */
     public final function removeClass(string $className): LoaderInterface
     {

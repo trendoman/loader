@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file contain Seeren\Loader\Psr4 class
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @author (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/loader
  * @version 1.0.1
  */
@@ -27,14 +26,12 @@ class Psr4 extends Loader implements Psr4Interface, LoaderInterface
 
     private
         /**
-         * @var array prefix collection
+         * @var array
          */
         $prefix;
 
     /**
-     * Construct Psr4
-     * 
-     * @return null
+     * @constructor
      */
     public final function __construct()
     {
@@ -43,8 +40,6 @@ class Psr4 extends Loader implements Psr4Interface, LoaderInterface
     }
 
     /**
-     * Parse prefix
-     * 
      * @param string $prefix namespace prefix
      * @return string parsed prefix
      */
@@ -54,8 +49,6 @@ class Psr4 extends Loader implements Psr4Interface, LoaderInterface
     }
 
     /**
-     * Parse base directory
-     *
      * @param string $baseDirectory base directory
      * @return string parsed base directory
      */
@@ -65,8 +58,6 @@ class Psr4 extends Loader implements Psr4Interface, LoaderInterface
     }
 
     /**
-     * Parse file name
-     *
      * @param string $baseDirectory base directory
      * @param string $relativeClass namespace relative class
      * @return string parsed file name
@@ -75,17 +66,12 @@ class Psr4 extends Loader implements Psr4Interface, LoaderInterface
         string $baseDirectory,
         string $relativeClass): string
     {
-        return str_replace(
-                "\\",
-                DIRECTORY_SEPARATOR,
-                $baseDirectory
-              . $relativeClass
-              . ".php");
+        return str_replace("\\", DIRECTORY_SEPARATOR,$baseDirectory
+                                                   . $relativeClass
+                                                   . ".php");
     }
 
     /**
-     * Find file name
-     *
      * @param string $prefix namespace prefix
      * @param string $relativeClass namespace relative class
      * @return string file name
@@ -103,10 +89,8 @@ class Psr4 extends Loader implements Psr4Interface, LoaderInterface
     }
 
     /**
-     * Template method Get file name
-     *
-     * @param string $className class name
-     * @return string file name
+     * {@inheritDoc}
+     * @see \Seeren\Loader\Loader::fileName()
      */
     protected final function fileName(string $className): string
     {
@@ -125,11 +109,8 @@ class Psr4 extends Loader implements Psr4Interface, LoaderInterface
     }
 
     /**
-     * Add prefix
-     *
-     * @param string $prefix namespace prefix
-     * @param string|array $baseDirectory base directory
-     * @return LoaderInterface static
+     * {@inheritDoc}
+     * @see \Seeren\Loader\Psr4Interface::addPrefix()
      */
     public final function addPrefix(
         string $prefix,
@@ -152,10 +133,8 @@ class Psr4 extends Loader implements Psr4Interface, LoaderInterface
     }
 
     /**
-     * Remove prefix
-     *
-     * @param string $prefixe namespace prefix
-     * @return LoaderInterface static
+     * {@inheritDoc}
+     * @see \Seeren\Loader\Psr4Interface::removePrefix()
      */
     public final function removePrefix(string $prefix): LoaderInterface
     {

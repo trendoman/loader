@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file contain Seeren\Loader\Test\UniversalLoaderTest class
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @author (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/loader
  * @version 1.0.2
  */
@@ -33,9 +32,8 @@ class UniversalLoaderTest extends AbstractLoaderTest
 {
 
    /**
-    * Get LoaderInterface
-    *
-    * @return LoaderInterface loader
+    * {@inheritDoc}
+    * @see \Seeren\Loader\Test\AbstractLoaderTest::getLoader()
     */
    protected final function getLoader(): LoaderInterface
    {
@@ -131,7 +129,7 @@ class UniversalLoaderTest extends AbstractLoaderTest
    public function testRemovePrefix()
    {
        $loader = $this->getLoader();
-       $loader->compose("./test/psr4.json");
+       $loader->compose("./test/json/psr4.json");
        $loader->removePrefix("Foo\\Bar\\");
        $this->assertFalse($loader->load(UniversalLoaderFoo::class));
    }
