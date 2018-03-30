@@ -1,4 +1,6 @@
 /.settings/
+/public/
 /vendor/
 /.buildpath
 /.project
+/phpunit.xml
